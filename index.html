@@ -6,11 +6,14 @@
 <style>
 :root{--bg:#f6f7fb;--panel:#fff;--ink:#202536;--muted:#778096;--line:#e8eaf1;--accent:#6257d9;--soft:#efedff;--green:#27966b;--shadow:0 8px 30px #25294a0a}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer;border:0}.app{max-width:1180px;margin:auto;padding:24px}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:21px}.logo{width:40px;height:40px;border-radius:13px;background:var(--accent);color:white;display:grid;place-items:center;font-size:21px}.muted{color:var(--muted)}.layout{display:grid;grid-template-columns:230px 1fr;gap:22px}.side,.card,.stat{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.side{padding:14px;height:max-content;position:sticky;top:16px}.nav{display:flex;align-items:center;gap:10px;width:100%;padding:11px 12px;border-radius:11px;background:transparent;color:var(--muted);text-align:left;margin:2px 0}.nav.active,.nav:hover{background:var(--soft);color:var(--accent);font-weight:650}.sidehint{margin:18px 10px 6px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#9aa1b2}.main{min-width:0}.welcome{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:20px}.welcome h1{margin:0 0 5px;font-size:27px;letter-spacing:-.04em}.btn{background:var(--accent);color:#fff;padding:10px 15px;border-radius:11px;font-weight:650}.btn.secondary{background:var(--soft);color:var(--accent)}.btn.ghost{background:#f3f4f8;color:#596176}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.stat{padding:16px}.stat .num{font-size:25px;font-weight:800;letter-spacing:-.04em}.stat small{color:var(--muted)}.card{padding:19px;margin-bottom:16px}.cardhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.card h2{font-size:17px;margin:0}.progress{height:8px;background:#eff0f5;border-radius:20px;overflow:hidden}.progress span{display:block;height:100%;background:var(--accent);border-radius:20px}.subject-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.subject{border:1px solid var(--line);border-radius:14px;padding:15px;cursor:pointer;transition:.15s}.subject:hover{border-color:#c6c0ff;transform:translateY(-1px)}.subjecttop{display:flex;justify-content:space-between;align-items:center}.emoji{width:38px;height:38px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:19px}.subject h3{margin:10px 0 2px;font-size:15px}.subject p{margin:0 0 12px;color:var(--muted);font-size:12px}.row{display:flex;justify-content:space-between;align-items:center;gap:10px}.small{font-size:12px;color:var(--muted)}.topic{padding:13px 0;border-bottom:1px solid var(--line)}.topic:last-child{border:0}.topicname{font-weight:650}.pill{font-size:11px;border-radius:20px;padding:4px 8px;background:#f1f2f7;color:#70788c}.task{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}.task:last-child{border:0}.task input{accent-color:var(--accent);width:17px;height:17px;margin-top:3px}.task.done .tasktext{text-decoration:line-through;color:#9aa1b2}.empty{text-align:center;padding:30px;color:var(--muted)}.field{display:flex;flex-direction:column;gap:5px;margin:10px 0}.field label{font-size:12px;color:var(--muted);font-weight:650}.field input,.field textarea,.field select{border:1px solid var(--line);border-radius:10px;padding:10px 11px;background:white;color:var(--ink);width:100%;outline:none}.field input:focus,.field textarea:focus{border-color:#a49cff}.modal{position:fixed;inset:0;background:#171a2b66;display:none;align-items:center;justify-content:center;padding:16px;z-index:5}.modal.show{display:flex}.dialog{width:min(480px,100%);background:white;border-radius:18px;padding:22px;max-height:90vh;overflow:auto}.dialog h2{margin:0 0 14px}.actions{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}.hidden{display:none!important}.note{background:#fbfaff;border:1px solid #eeeaff;padding:12px;border-radius:12px;margin:8px 0}.days{display:flex;gap:8px;flex-wrap:wrap}.days label{display:flex;align-items:center;gap:5px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:13px}.days input{accent-color:var(--accent)}.returnbox{border:1px solid #e8e2ff;background:#fbfaff;border-radius:14px;padding:15px;margin-bottom:16px}.returnbox p{margin:6px 0 12px}.footer{text-align:center;color:#a0a5b3;font-size:11px;padding:18px}
-.backup-bar{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);align-items:center}
+.sync-status{display:inline-block;width:8px;height:8px;border-radius:50%;background:#27966b;margin-left:6px;vertical-align:middle}
 @media(max-width:760px){.app{padding:15px}.layout{grid-template-columns:1fr}.side{position:static;display:flex;overflow:auto;padding:7px;gap:4px}.nav{white-space:nowrap;width:auto;margin:0}.sidehint{display:none}.stats{grid-template-columns:repeat(2,1fr)}.subject-grid{grid-template-columns:1fr}.welcome h1{font-size:23px}.welcome{align-items:center}.welcome .btn{padding:9px 11px}.stat{padding:13px}}
-</style></head>
+</style>
+<!-- Supabase JS Client -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
 <body><div class="app">
-<header class="top"><div class="brand"><div class="logo">✦</div> Atlas <span class="muted" style="font-weight:500;font-size:13px">личная система развития</span></div><div class="small" id="today"></div></header>
+<header class="top"><div class="brand"><div class="logo">✦</div> Atlas <span class="muted" style="font-weight:500;font-size:13px">личная система развития <span id="syncIndicator" title="Облако подключено" class="sync-status"></span></span></div><div class="small" id="today"></div></header>
 <div class="layout">
 <aside class="side">
 <button class="nav active" data-page="home">⌂　Обзор</button><button class="nav" data-page="world">◈　Мои направления</button><button class="nav" data-page="library">▤　Библиотека</button><button class="nav" data-page="notes">✎　Заметки</button><button class="nav" data-page="activity">◷　Активность</button><button class="nav" data-page="rhythm">☼　Мой ритм</button>
@@ -46,10 +49,14 @@
 <div class="card"><h2>Основной и минимальный план</h2><div class="topic"><b>Основной план</b><div class="small">Обычное занятие в комфортном темпе — ориентир, а не обязательная норма.</div></div><div class="topic"><b>Минимальный план</b><div class="small">Одно крошечное действие на 5 минут. Его достаточно, чтобы поддержать контакт с интересом.</div></div></div>
 </section>
 <section id="page-profile" class="hidden"><div class="welcome"><div><h1>Мой прогресс</h1><div class="muted">Не рейтинг, а карта твоего собственного пути.</div></div></div><div class="card" id="profileCard"></div></section>
-</main></div><div class="footer">ATLAS · Твой мир, твои правила · Автобэкап 2 раза в день</div></div>
+</main></div><div class="footer">ATLAS · Твой мир, твои правила · Синхронизация с облаком активна</div></div>
 <div class="modal" id="modal"><div class="dialog"><h2 id="modalTitle"></h2><div id="modalBody"></div><div class="actions"><button class="btn ghost" onclick="closeModal()">Отмена</button><button class="btn" id="saveBtn">Сохранить</button></div></div></div>
-<input type="file" id="importFile" accept=".json" class="hidden" onchange="handleImport(event)">
 <script>
+// Supabase Configuration
+const SUPABASE_URL = 'https://lenenunkhgihqaywbalu.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_LO2NCPSK_SsUTqdt-49o3w_PI2X9t4h';
+const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
 const KEY='atlas-v02';
 const starter={xp:0,subjects:[
 {id:1,name:'Физика',emoji:'⚛️',desc:'Законы природы и устройство Вселенной',topics:[{id:11,name:'Основы физики',tasks:[{id:111,text:'Разобраться с физическими величинами',done:false},{id:112,text:'Изучить систему СИ',done:false}]},{id:12,name:'Классическая механика',tasks:[]}]},
@@ -57,82 +64,68 @@ const starter={xp:0,subjects:[
 {id:3,name:'Философия',emoji:'🏛️',desc:'Идеи, мыслители и большие вопросы',topics:[{id:31,name:'Введение в философию',tasks:[]}]},
 {id:4,name:'Рисование',emoji:'🎨',desc:'Наблюдение, форма и визуальное мышление',topics:[]}
 ],resources:[],notes:[],activity:[]};
-let data;try{data=JSON.parse(localStorage.getItem(KEY))||JSON.parse(localStorage.getItem('atlas-v01'))||starter}catch(e){data=starter}
-data.settings=data.settings||{reminderDays:[],reminderTime:'19:00',remindersEnabled:false,minimumAction:'Открыть материал и прочитать один абзац',autoBackup:true};
-if(typeof data.settings.autoBackup==='undefined')data.settings.autoBackup=true;
-data.lastActiveDate=data.lastActiveDate||null;
-data.lastBackupSlot=data.lastBackupSlot||null;
-let currentSubject=null,modalMode='';
+
+let data = starter;
+let isSyncing = false;
+
+// Initialize data from Supabase cloud
+async function initData() {
+  try {
+    const { data: rows, error } = await supabaseClient
+      .from('atlas_data')
+      .select('content')
+      .eq('id', 1)
+      .single();
+    
+    if (rows && rows.content) {
+      data = rows.content;
+    } else {
+      // If row doesn't exist yet, insert starter data
+      await supabaseClient.from('atlas_data').upsert({ id: 1, content: starter });
+    }
+  } catch (err) {
+    console.error('Cloud load error, falling back to local storage:', err);
+    try {
+      data = JSON.parse(localStorage.getItem(KEY)) || starter;
+    } catch(e) {
+      data = starter;
+    }
+  }
+
+  data.settings = data.settings || {reminderDays:[],reminderTime:'19:00',remindersEnabled:false,minimumAction:'Открыть материал и прочитать один абзац'};
+  data.lastActiveDate = data.lastActiveDate || null;
+  
+  render();
+  initRhythm();
+}
+
+async function save() {
+  // Save locally first for instant UI response
+  localStorage.setItem(KEY, JSON.stringify(data));
+  
+  // Sync to Supabase cloud
+  const indicator = $('syncIndicator');
+  if (indicator) indicator.style.background = '#f59e0b'; // orange = syncing
+  
+  try {
+    const { error } = await supabaseClient
+      .from('atlas_data')
+      .upsert({ id: 1, content: data, updated_at: new Date() });
+    
+    if (error) throw error;
+    if (indicator) indicator.style.background = '#27966b'; // green = synced
+  } catch (err) {
+    console.error('Cloud sync error:', err);
+    if (indicator) indicator.style.background = '#ef4444'; // red = error
+  }
+}
+
 const $=id=>document.getElementById(id);
-const save=()=>{localStorage.setItem(KEY,JSON.stringify(data));checkAutoBackup();};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const allTasks=()=>data.subjects.flatMap(s=>s.topics.flatMap(t=>t.tasks));
 const completed=()=>allTasks().filter(t=>t.done).length;
 const total=()=>allTasks().length;
 const pct=s=>{let a=s.topics.flatMap(t=>t.tasks);return a.length?Math.round(a.filter(t=>t.done).length/a.length*100):0};
-
-function downloadBackup(isAuto=false){
-  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement('a');
-  const d=new Date();
-  const dateStr=d.toISOString().slice(0,10);
-  const period=d.getHours()<12?'morning':'evening';
-  a.href=url;
-  a.download=`atlas-backup-${dateStr}-${period}.json`;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-  data.lastBackupSlot=`${dateStr}_${period}`;
-  localStorage.setItem(KEY,JSON.stringify(data));
-  if(!isAuto)render();
-}
-
-function checkAutoBackup(){
-  if(!data.settings.autoBackup)return;
-  const now=new Date();
-  const dateStr=now.toISOString().slice(0,10);
-  const slot=`${dateStr}_${now.getHours()<12?'AM':'PM'}`;
-  if(data.lastBackupSlot!==slot){
-    downloadBackup(true);
-  }
-}
-
-function toggleAutoBackup(checked){
-  data.settings.autoBackup=checked;
-  save();
-  render();
-}
-
-function triggerImport(){
-  $('importFile').click();
-}
-
-function handleImport(e){
-  const file=e.target.files[0];
-  if(!file)return;
-  const reader=new FileReader();
-  reader.onload=ev=>{
-    try{
-      const parsed=JSON.parse(ev.target.result);
-      if(parsed && Array.isArray(parsed.subjects)){
-        data=parsed;
-        data.settings=data.settings||{reminderDays:[],reminderTime:'19:00',remindersEnabled:false,minimumAction:'Открыть материал и прочитать один абзац',autoBackup:true};
-        localStorage.setItem(KEY,JSON.stringify(data));
-        render();
-        alert('Данные успешно загружены из файла!');
-      }else{
-        alert('Файл не похож на резервную копию Atlas.');
-      }
-    }catch(err){
-      alert('Ошибка чтения файла. Убедись, что это правильный JSON-бэкап.');
-    }
-    e.target.value='';
-  };
-  reader.readAsText(file);
-}
-
 function dayGap(){
  if(!data.lastActiveDate)return 0;
  const a=new Date(data.lastActiveDate+'T12:00:00'),b=new Date();b.setHours(12,0,0,0);
@@ -147,19 +140,7 @@ $('homeSubjects').innerHTML=cards||'<div class="empty">Пока пусто. Со
 let pending=data.subjects.flatMap(s=>s.topics.flatMap(t=>t.tasks.filter(x=>!x.done).map(x=>({...x,subject:s.name,topic:t.name}))));$('nextTask').innerHTML=pending.length?`<div class="task"><span>○</span><div><b>${esc(pending[0].text)}</b><div class="small">${esc(pending[0].subject)} · ${esc(pending[0].topic)}</div></div></div>`:'<div class="muted">Все текущие шаги завершены — можешь добавить новые или просто выбрать, чем заняться сегодня.</div>';
 $('libraryList').innerHTML=resourceHTML(data.resources);$('notesList').innerHTML=data.notes.length?data.notes.slice().reverse().map(n=>`<div class="note"><b>${esc(n.title)}</b><div class="small">${esc(n.subject||'Без направления')} · ${esc(n.date)}</div><div style="margin-top:6px;white-space:pre-wrap">${esc(n.body)}</div></div>`).join(''):'<div class="empty">Здесь будут твои мысли и инсайты.</div>';
 $('activityList').innerHTML=data.activity.length?data.activity.slice().reverse().map(a=>`<div class="topic"><div class="row"><b>${esc(a.text)}</b><span class="pill">+${a.xp} XP</span></div><div class="small">${esc(a.subject)} · ${esc(a.date)}</div></div>`).join(''):'<div class="empty">История появится после первых выполненных шагов.</div>';
-$('profileCard').innerHTML=`<div class="row"><div><div class="small">Текущий уровень</div><div style="font-size:38px;font-weight:800">LVL ${level}</div></div><div class="emoji" style="width:58px;height:58px;font-size:27px">✦</div></div><div class="progress" style="margin:12px 0"><span style="width:${data.xp%100}%"></span></div><p class="muted">${data.xp%100} / 100 XP до следующего уровня</p><div class="stats"><div class="stat"><div class="num">${data.subjects.length}</div><small>направлений</small></div><div class="stat"><div class="num">${completed()}</div><small>выполнено шагов</small></div><div class="stat"><div class="num">${data.resources.length}</div><small>материалов</small></div><div class="stat"><div class="num">${data.notes.length}</div><small>заметок</small></div></div><p class="muted">Опыт начисляется за выполненные учебные шаги. Это мягкая обратная связь, а не соревнование.</p>
-<div class="note">
-  <b>Резервное копирование и перенос данных</b>
-  <div class="small" style="margin:4px 0 10px">Файл автоматически скачивается 2 раза в день (утром и вечером при работе в приложении), чтобы ты мог перекинуть его на другое устройство.</div>
-  <label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;margin-bottom:12px">
-    <input type="checkbox" style="accent-color:var(--accent);width:16px;height:16px" ${data.settings.autoBackup?'checked':''} onchange="toggleAutoBackup(this.checked)">
-    Автоматически скачивать файл 2 раза в день
-  </label>
-  <div class="backup-bar" style="border-top:0;padding-top:0;margin-top:0">
-    <button class="btn secondary" onclick="downloadBackup(false)">📥 Скачать бэкап сейчас</button>
-    <button class="btn ghost" onclick="triggerImport()">📤 Загрузить из файла</button>
-  </div>
-</div>`;
+$('profileCard').innerHTML=`<div class="row"><div><div class="small">Текущий уровень</div><div style="font-size:38px;font-weight:800">LVL ${level}</div></div><div class="emoji" style="width:58px;height:58px;font-size:27px">✦</div></div><div class="progress" style="margin:12px 0"><span style="width:${data.xp%100}%"></span></div><p class="muted">${data.xp%100} / 100 XP до следующего уровня</p><div class="stats"><div class="stat"><div class="num">${data.subjects.length}</div><small>направлений</small></div><div class="stat"><div class="num">${completed()}</div><small>выполнено шагов</small></div><div class="stat"><div class="num">${data.resources.length}</div><small>материалов</small></div><div class="stat"><div class="num">${data.notes.length}</div><small>заметок</small></div></div><p class="muted">Опыт начисляется за выполненные учебные шаги. Данные синхронизируются в реальном времени через облако Supabase.</p>`;
 }
 function resourceHTML(arr){return arr.length?arr.map(r=>`<div class="topic"><div class="row"><b>${esc(r.title)}</b><span class="pill">${esc(r.type)}</span></div><div class="small">${esc(r.subject||'Без направления')} ${r.url?'· <a href="'+esc(r.url)+'" target="_blank" rel="noopener">Открыть материал ↗</a>':''}</div>${r.note?`<div class="muted" style="margin-top:5px">${esc(r.note)}</div>`:''}</div>`).join(''):'<div class="empty">Пока нет материалов.</div>'}
 function go(page){document.querySelectorAll('main section').forEach(x=>x.classList.add('hidden'));$('page-'+page).classList.remove('hidden');document.querySelectorAll('.nav').forEach(x=>x.classList.toggle('active',x.dataset.page===page))}
@@ -207,11 +188,11 @@ function scheduleNextReminder(){
  if(!next)return;
  reminderTimer=setTimeout(()=>{if(dayGap()>=0){try{new Notification('Atlas — маленький шаг?',{body:'Можно уделить своим интересам всего 5 минут. Без долгов и давления.'})}catch(e){}}scheduleNextReminder()},next-now);
 }
-function saveMinimumAction(){data.settings.minimumAction=$('minimumAction').value.trim()||'Открыть материал на 5 минут';save();render();alert('Минимальный шаг сохранён.')}
+function saveMinimumAction(){data.settings.minimumAction=$('minimumAction'].value.trim()||'Открыть материал на 5 минут';save();render();alert('Минимальный шаг сохранён.')}
 function doMinimumStep(){
  const action=data.settings.minimumAction||'Сделал маленький шаг';
  data.xp+=5;data.lastActiveDate=new Date().toISOString().slice(0,10);
- data.activity.push({text:'Минимальный шаг: '+action,subject:'Мягкое возвращение',xp:5,date:new Date().toLocaleDateString('ru-RU')});
+ data.activity.push({text:'Минимальный шаг: '+action,subject:'Мяgкое возвращение',xp:5,date:new Date().toLocaleDateString('ru-RU')});
  save();render();
 }
 function dismissReturn(){$('returnPrompt').innerHTML='';}
@@ -220,5 +201,6 @@ function initRhythm(){
  $('reminderTime').value=data.settings.reminderTime||'19:00';$('minimumAction').value=data.settings.minimumAction||'Открыть материал и прочитать один абзац';
  updateReminderStatus();scheduleNextReminder();
 }
-$('today').textContent=new Date().toLocaleDateString('ru-RU',{weekday:'long',day:'numeric',month:'long'});render();initRhythm();
+$('today').textContent=new Date().toLocaleDateString('ru-RU',{weekday:'long',day:'numeric',month:'long'});
+initData();
 </script></body></html>
